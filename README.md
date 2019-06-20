@@ -52,6 +52,10 @@ Crie uma rota para listar os meetups em que o usuário logado está inscrito.
 
 Liste apenas meetups que ainda não passaram e ordene meetups mais próximos como primeiros da lista.
 
+## Bônus
+
+Configure o arquivo `docker-compose.yml` para montar todo ambiente necessário para sua aplicação executar do zero.
+
 ## Entrega
 
 Esse desafio **não precisa ser entregue** e não receberá correção, mas você pode ver o resultado do código do desafio aqui: https://github.com/Rocketseat/bootcamp-desafio-03
