@@ -1,0 +1,41 @@
+{
+  "name": "mod02",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "dev": "nodemon src/server.js",
+    "queue": "nodemon src/queue.js"
+  },
+  "dependencies": {
+    "@sentry/node": "^5.4.0",
+    "bcryptjs": "^2.4.3",
+    "bee-queue": "^1.2.2",
+    "date-fns": "^2.0.0-alpha.34",
+    "dotenv": "^8.0.0",
+    "express": "^4.17.1",
+    "express-async-errors": "^3.1.1",
+    "express-handlebars": "^3.1.0",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.6.0",
+    "multer": "^1.4.1",
+    "nodemailer": "^6.2.1",
+    "nodemailer-express-handlebars": "^3.0.0",
+    "pg": "^7.11.0",
+    "pg-hstore": "^2.3.3",
+    "sequelize": "^5.8.7",
+    "youch": "^2.0.10",
+    "yup": "^0.27.0"
+  },
+  "devDependencies": {
+    "eslint": "^5.16.0",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-config-prettier": "^4.3.0",
+    "eslint-plugin-import": "^2.17.3",
+    "eslint-plugin-prettier": "^3.1.0",
+    "nodemon": "^1.19.1",
+    "prettier": "^1.17.1",
+    "sequelize-cli": "^5.5.0",
+    "sucrase": "^3.10.1"
+  }
+}
