@@ -30,7 +30,7 @@ O usuário não pode se inscrever em meetups que já aconteceram.
 
 O usuário não pode se inscrever no mesmo meetup duas vezes.
 
-O usuário não pode se increver em dois meetups que acontecem no mesmo horário.
+O usuário não pode se inscrever em dois meetups que acontecem no mesmo horário.
 
 Sempre que um usuário se inscrever no meetup, envie um e-mail ao organizador contendo os dados relacionados ao usuário inscrito. O template do e-mail fica por sua conta :)
 
