@@ -26,7 +26,7 @@ class User extends Model {
 
   static associate(models) {
     this.hasMany(models.Meetup, { foreignKey: 'user_id' });
-    this.hasMany(models.Subscription);
+    this.hasMany(models.Subscription,{ foreignKey: 'user_id' });
   }
 
   checkPassword(password) {
