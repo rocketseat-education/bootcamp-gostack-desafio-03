@@ -1,8 +1,38 @@
-# Desafio 03. Continuando aplicação
+<h1 align="center">
+  <img alt="Gympoint" title="Gympoint" src=".github/logo.png" width="200px" />
+</h1>
 
-Durante esse desafio vamos aprimorar a aplicação Meetapp que demos início no desafio anterior implementando funcionalidades que aprendemos durante as aulas até agora.
+<h3 align="center">
+  Desafio 3: Gympoint, continuando a aplicação
+</h3>
 
-## Funcionalidades
+<blockquote align="center">“Faça seu melhor, mas sempre com prazo de entrega”!</blockquote>
+
+<p align="center">
+  <img alt="GitHub language count" src="https://img.shields.io/github/languages/count/rocketseat/bootcamp-gostack-desafio-03?color=%2304D361">
+
+  <a href="https://rocketseat.com.br">
+    <img alt="Made by Rocketseat" src="https://img.shields.io/badge/made%20by-Rocketseat-%2304D361">
+  </a>
+
+  <img alt="License" src="https://img.shields.io/badge/license-MIT-%2304D361">
+
+  <a href="https://github.com/Rocketseat/bootcamp-gostack-desafio-03/stargazers">
+    <img alt="Stargazers" src="https://img.shields.io/github/stars/rocketseat/bootcamp-gostack-desafio-03?style=social">
+  </a>
+</p>
+
+<p align="center">
+  <a href="#rocket-sobre-o-desafio">Sobre o desafio</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-entrega">Entrega</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#memo-licença">Licença</a>
+</p>
+
+## :rocket: Sobre o desafio
+
+Durante esse desafio vamos aprimorar a aplicação Gympoint que demos início no desafio anterior implementando funcionalidades que aprendemos durante as aulas até agora.
+
+### Funcionalidades
 
 Abaixo estão descritas as funcionalidades que você deve adicionar em sua aplicação.
 
@@ -52,10 +82,14 @@ Crie uma rota para listar os meetups em que o usuário logado está inscrito.
 
 Liste apenas meetups que ainda não passaram e ordene meetups mais próximos como primeiros da lista.
 
-## Entrega
+## 📅 Entrega
 
-Esse desafio **não precisa ser entregue** e não receberá correção, mas você pode ver o resultado do código do desafio aqui: https://github.com/Rocketseat/bootcamp-gostack-desafio-03
+Esse desafio **não precisa ser entregue** e não receberá correção, mas você pode ver o resultado do [código do desafio aqui](https://github.com/Rocketseat/bootcamp-gostack-desafio-03). Após concluir o desafio, adicionar esse código ao seu Github é uma boa forma de demonstrar seus conhecimentos para oportunidades futuras.
 
-Após concluir o desafio, adicionar esse código ao seu Github é uma boa forma de demonstrar seus conhecimentos para oportunidades futuras.
+## :memo: Licença
 
-“Faça seu melhor, mas sempre com prazo de entrega”!
+Esse projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE.md) para mais detalhes.
+
+---
+
+Feito com ♥ by Rocketseat :wave: [Entre na nossa comunidade!](https://discordapp.com/invite/gCRAFhc)
