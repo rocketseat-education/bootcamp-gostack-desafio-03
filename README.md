@@ -36,55 +36,105 @@ Durante esse desafio vamos aprimorar a aplicação Gympoint que demos início no
 
 Abaixo estão descritas as funcionalidades que você deve adicionar em sua aplicação.
 
-### Gerenciamento de arquivos
+Obs.: Todas funcionalidades abaixo só devem estar disponíveis para usuários autenticados na aplicação.
 
-Crie uma rota para upload de arquivos que cadastra em uma tabela o caminho e nome do arquivo e retorna todos dados do arquivo cadastrado.
+#### 1. Gestão de planos
 
-### Gerenciamento de meetups
+Permita que o usuário possa cadastrar planos para matrícula de alunos, o plano deve possuir os seguintes campos:
 
-O usuário pode cadastrar meetups na plataforma com título do meetup, descrição, localização, data e hora e imagem (banner). Todos campos são obrigatórios. Adicione também um campo user_id que armazena o ID do usuário que organiza o evento.
+- title (nome do plano);
+- duration (duração em número de meses);
+- price (preço mensal do plano);
+- created_at;
+- updated_at;
 
-Não deve ser possível cadastrar meetups com datas que já passaram.
+Crie alguns planos como por exemplo:
 
-O usuário também deve poder editar todos dados de meetups que ainda não aconteceram e que ele é organizador.
+- `Start`: Plano de 1 mês por R\$129;
+- `Gold`: Plano de 3 meses por R\$109/mês;
+- `Diamond`: Plano de 6 meses por R\$89/mês;
 
-Crie uma rota para listar os meetups que são organizados pelo usuário logado.
+Crie rotas para listagem/cadastro/atualização/remocação de planos;
 
-O usuário deve poder cancelar meetups organizados por ele e que ainda não aconteceram. O cancelamento deve deletar o meetup da base de dados.
+#### 2. Gestão de matrículas
 
-### Inscrição no meetup
+Apesar do aluno estar cadastrado na plataforma, isso não significa que o mesmo tem uma matrícula ativa e que pode acessar a academia.
 
-O usuário deve poder se inscrever em meetups que não organiza.
+Nessa funcionalidade criaremos um cadastro de matrículas por aluno, a matrícula possui os campos:
 
-O usuário não pode se inscrever em meetups que já aconteceram.
+- student_id (referência ao aluno);
+- plan_id (referência ao plano);
+- start_date (data de início da matrícula);
+- end_date (date de término da matrícula);
+- price (preço total calculado na data da matrícula);
+- created_at;
+- updated_at;
 
-O usuário não pode se inscrever no mesmo meetup duas vezes.
+A **data de início** da matrícula deve ser escolhida pelo usuário.
 
-O usuário não pode se inscrever em dois meetups que acontecem no mesmo horário.
+A **data de término** e **preço** da matrícula deve ser calculada com base no plano selecionado, por exemplo:
 
-Sempre que um usuário se inscrever no meetup, envie um e-mail ao organizador contendo os dados relacionados ao usuário inscrito. O template do e-mail fica por sua conta :)
+Data de início informada: `23/05/2019`
+Plano selecionado: `Gold (3 meses)`
+Data de término calculada: `23/08/2019 (3 meses depois do início)`
+Preço calculado: `R$327`
 
-### Listagem de meetups
+Quando um aluno **realiza uma matrícula** ele recebe um e-mail com detalhes da sua inscrição na academia como plano, data de término, valor e uma mensagem de boas-vidas.
 
-Crie uma rota para listar os meetups com filtro por data (não por hora), os resultados dessa listagem devem vir paginados em 10 itens por página. Abaixo tem um exemplo de chamada para a rota de listagem dos meetups:
+Crie rotas para listagem/cadastro/atualização/remocação de matrículas;
 
-```
-http://localhost:3333/meetups?date=2019-07-01&page=2
-```
+#### 3. Checkins
 
-Nesse exemplo, listaremos a página 2 dos meetups que acontecerão no dia 01 de Julho.
+Quando o aluno chega na academia o mesmo realiza um check-in apenas informando seu ID de cadastro (ID do banco de dados);
 
-Nessa listagem retorne também os dados do organizador.
+Esse check-in serve para monitorar quantas vezes o usuário frequentou a academia na semana.
 
-### Listagem de inscrições
+A tabela de `checkins` possui os campos:
 
-Crie uma rota para listar os meetups em que o usuário logado está inscrito.
+- student_id (referência ao aluno);
+- created_at;
+- updated_at;
 
-Liste apenas meetups que ainda não passaram e ordene meetups mais próximos como primeiros da lista.
+O usuário só pode fazer **5 checkins** dentro de um período de 7 dias corridos.
+
+Exemplo de requisição: `POST https://gympoint.com/students/3/checkins`
+
+Crie uma rota para listagem de todos checkins realizados por um usuário com base em seu ID de cadastro;
+
+Exemplo de requisição: `GET https://gympoint.com/students/3/checkins`
+
+#### 4. Pedidos de auxílio
+
+O aluno pode criar pedidos de auxílio para a academia em relação a algum exercício, alimentação ou instrução qualquer;
+
+A tabela `help_orders` deve conter os seguintes campos:
+
+- student_id (referência ao aluno);
+- question (pergunta do aluno em texto);
+- answer (resposta da academia em texto);
+- answer_at (data da resposta da academia);
+- created_at;
+- updated_at;
+
+Crie uma rota para a academia listar todos pedidos de auxílio sem resposta;
+
+Crie uma rota para o aluno cadastrar pedidos de auxílio apenas informando seu ID de cadastro (ID do banco de dados);
+
+Exemplo de requisição: `POST https://gympoint.com/students/3/help-orders`
+
+Crie uma rota para listar todos pedidos de auxílio de um usuário com base em seu ID de cadastro;
+
+Exemplo de requisição: `GET https://gympoint.com/students/3/help-orders`
+
+Crie uma rota para a academia responder um pedido de auxílio:
+
+Exemplo de requisição: `POST https://gympoint.com/help-orders/1/answer`
+
+Quando um pedido de auxílio for respondido, o aluno deve receber um e-mail da plataforma com a pergunta e resposta da academia;
 
 ## 📅 Entrega
 
-Esse desafio **não precisa ser entregue** e não receberá correção, mas você pode ver o resultado do [código do desafio aqui](https://github.com/Rocketseat/bootcamp-gostack-desafio-03). Após concluir o desafio, adicionar esse código ao seu Github é uma boa forma de demonstrar seus conhecimentos para oportunidades futuras.
+Esse desafio **não precisa ser entregue** e não receberá correção. Além disso, o código fonte **não está disponível** por fazer parte do **desafio final**, que será corrigido para **certificação** do bootcamp. Após concluir o desafio, adicionar esse código ao seu Github é uma boa forma de demonstrar seus conhecimentos para oportunidades futuras.
 
 ## :memo: Licença
 
