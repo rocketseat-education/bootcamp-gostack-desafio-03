@@ -32,11 +32,9 @@
 
 Durante esse desafio vamos aprimorar a aplicação Gympoint que demos início no desafio anterior implementando funcionalidades que aprendemos durante as aulas até agora.
 
-### Funcionalidades
+### Funcionalidades do administrador
 
-Abaixo estão descritas as funcionalidades que você deve adicionar em sua aplicação.
-
-Obs.: Todas funcionalidades abaixo só devem estar disponíveis para usuários autenticados na aplicação.
+Abaixo estão descritas as funcionalidades que você deve adicionar em sua aplicação para administradores.
 
 #### 1. Gestão de planos
 
@@ -55,6 +53,8 @@ Crie alguns planos como por exemplo:
 - `Diamond`: Plano de 6 meses por R\$89/mês;
 
 Crie rotas para listagem/cadastro/atualização/remocação de planos;
+
+Obs.: Essa funcionalidade é para administradores autenticados na aplicação.
 
 #### 2. Gestão de matrículas
 
@@ -83,7 +83,13 @@ Quando um aluno **realiza uma matrícula** ele recebe um e-mail com detalhes da 
 
 Crie rotas para listagem/cadastro/atualização/remocação de matrículas;
 
-#### 3. Checkins
+Obs.: Essa funcionalidade é para administradores autenticados na aplicação.
+
+### Funcionalidades do aluno
+
+Abaixo estão descritas as funcionalidades que você deve adicionar em sua aplicação para alunos.
+
+#### 1. Checkins
 
 Quando o aluno chega na academia o mesmo realiza um check-in apenas informando seu ID de cadastro (ID do banco de dados);
 
@@ -103,7 +109,7 @@ Crie uma rota para listagem de todos checkins realizados por um usuário com bas
 
 Exemplo de requisição: `GET https://gympoint.com/students/3/checkins`
 
-#### 4. Pedidos de auxílio
+#### 2. Pedidos de auxílio
 
 O aluno pode criar pedidos de auxílio para a academia em relação a algum exercício, alimentação ou instrução qualquer;
 
