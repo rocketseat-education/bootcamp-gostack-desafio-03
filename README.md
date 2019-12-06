@@ -79,9 +79,9 @@ Plano selecionado: `Gold (3 meses)`
 Data de término calculada: `23/08/2019 (3 meses depois do início)`
 Preço calculado: `R$327`
 
-Quando um aluno **realiza uma matrícula** ele recebe um e-mail com detalhes da sua inscrição na academia como plano, data de término, valor e uma mensagem de boas-vidas.
+Quando um aluno **realiza uma matrícula** ele recebe um e-mail com detalhes da sua inscrição na academia como plano, data de término, valor e uma mensagem de boas-vindas.
 
-Crie rotas para listagem/cadastro/atualização/remocação de matrículas;
+Crie rotas para listagem/cadastro/atualização/remoção de matrículas;
 
 Obs.: Essa funcionalidade é para administradores autenticados na aplicação.
 
