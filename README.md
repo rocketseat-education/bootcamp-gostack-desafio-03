@@ -6,6 +6,10 @@
   Desafio 3: Gympoint, continuando a aplicação
 </h3>
 
+<h4 align="center">
+  Etapa 2/4 do Desafio Final
+</h4>
+
 <blockquote align="center">“Faça seu melhor, mas sempre com prazo de entrega”!</blockquote>
 
 <p align="center">
