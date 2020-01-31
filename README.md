@@ -119,7 +119,7 @@ Crie uma rota para listar todos os problemas de uma encomenda baseado no ID da e
 
 Exemplo de requisição: `GET https://fastfeet.com/delivery/2/problems`
 
-Crie uma rota para o entregador cadastrar problemas na entrega apenas informando seu ID de cadastro (ID do banco de dados);
+Crie uma rota para o entregador cadastrar problemas na entrega apenas informando seu ID de cadastro (ID da encomenda no banco de dados);
 
 Exemplo de requisição: `POST https://fastfeet.com/delivery/3/problems`
 
