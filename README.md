@@ -90,9 +90,9 @@ Abaixo estão descritas as funcionalidades que você deve adicionar em sua aplic
 
 ### **1. Visualizar encomendas**
 
-Para que o entregador possa visualizar suas encomendas, ele deverá informar apenas seu ID de cadastro (ID do entregador no banco de dados). Esse funcionalidade deve retornar as encomendas atribuidas à ele, que **não estejam entregues ou canceladas**;
+Para que o entregador possa visualizar suas encomendas, ele deverá informar apenas seu ID de cadastro (ID do entregador no banco de dados). Essa funcionalidade deve retornar as encomendas atribuidas a ele, que **não estejam entregues ou canceladas**;
 
-Crie também uma rota para listagem de todas as entregas realizadas por um entregador, com base em seu ID de cadastro;
+Permita também que ele liste apenas as encomendas que já foram **entregues** por ele, com base em seu ID de cadastro;
 
 Exemplo de requisição: `GET https://fastfeet.com/deliveryman/1/deliveries`
 
