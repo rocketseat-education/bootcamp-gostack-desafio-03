@@ -36,7 +36,7 @@
 
 ## :rocket: Sobre o desafio
 
-Durante esse desafio vamos aprimorar a aplicação FastFeet que demos início no desafio anterior implementando funcionalidades que aprendemos durante as aulas até agora.
+Durante esse desafio vamos aprimorar a aplicação FastFeet que demos início no desafio anterior implementando funcionalidades que aprendemos durante as aulas até agora. 
 
 ### **Funcionalidades do administrador**
 
@@ -77,6 +77,8 @@ Nessa funcionalidade criaremos um cadastro de encomendas por entregador, a encom
 A **data de início** deve ser cadastrada assim que for feita a retirada do produto pelo entregador, e as retiradas só podem ser feitas entre as 08:00 e 18:00h.
 
 A **data de término** da entrega deve ser cadastrada quando o entregador finalizar a entrega:
+
+Os campos **recipient_id** e **deliveryman_id** devem ser cadastrados no momento que for cadastrada a encomenda.
 
 Quando a encomenda é **cadastrada** para um entregador, o entregador recebe um e-mail com detalhes da encomenda, com nome do produto e uma mensagem informando-o que o produto já está disponível para a retirada.
 
@@ -125,7 +127,7 @@ Exemplo de requisição: `POST https://fastfeet.com/delivery/3/problems`
 
 Crie uma rota para a distribuidora cancelar uma entrega baseado no ID do problema. Esse cancelamento pode acontecer devido a gravidade do problema da entrega, por exemplo, em caso de perda da encomenda.
 
-Exemplo de requisição: `POST https://fastfeet.com/problem/1/cancel-delivery`
+Exemplo de requisição: `DELETE https://fastfeet.com/problem/1/cancel-delivery`
 
 Quando uma encomenda for cancelada, o entregador deve receber um e-mail informando-o sobre o cancelamento.
 
